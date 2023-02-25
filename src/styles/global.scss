@@ -1,14 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 body * {
   font-family: "Inter", sans-serif;
-}
-body * .active {
-  transform: scale(1.1);
-}
-body * .tremer {
-  animation: tremer 0.5s infinite;
+
+  .active {
+    transform: scale(1.1);
+  }
+  .tremer{
+    animation: tremer 0.5s infinite;
+  }
 }
 
 @keyframes tremer {
@@ -27,4 +29,4 @@ body * .tremer {
   100% {
     transform: translateX(0);
   }
-}/*# sourceMappingURL=global.css.map */
+}
