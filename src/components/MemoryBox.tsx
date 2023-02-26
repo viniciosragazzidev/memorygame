@@ -403,12 +403,12 @@ export default function MemoryBox() {
     });
 
     setArrayNew(newArr);
+    setPlay(true);
 
     setTimeout(() => {
       const newArr = arrayNew.map((card, i) => {
         return { ...card, showTemp: false };
       });
-      setPlay(true);
       setCliquevel(true);
       setArrayNew(newArr);
       console.log(newArr);
