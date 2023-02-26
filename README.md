@@ -1,7 +1,7 @@
 # memorygame
 Jogo da memoria feito em ReactJs, TailwindCss e TypeScript
 ![image](https://user-images.githubusercontent.com/125518719/221365930-ef9a2ff2-24bd-4434-8445-1b23c17923a4.png)
-![image](https://user-images.githubusercontent.com/125518719/221365955-4893552a-6c36-430e-aaab-1c798473292a.png)
+![image](https://user-images.githubusercontent.com/125518719/221427733-7bbecd03-84bb-42da-a1cc-473dd39a0a7e.png)
 
 
 ## Descrição
