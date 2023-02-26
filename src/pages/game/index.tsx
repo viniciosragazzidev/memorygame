@@ -1,34 +1,41 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { RiGameFill } from "react-icons/ri";
-import { BiTimeFive } from "react-icons/bi";
-
-import { NavLink } from "react-router-dom";
+import { AiFillSound } from "react-icons/ai";
 import MemoryBox from "../../components/MemoryBox";
 import { DadosContext } from "../../context/ContextApp";
 
 export default function Game() {
-  const {
-    player,
-    setPlayer,
-    pointPlayer1,
-    setPointPlayer1,
-    pointPlayer2,
-    setPointPlayer2,
-  } = useContext(DadosContext);
+  const { audioMp3, setAudioMp3 } = useContext(DadosContext);
+  const [volumeA, setVolumeA] = useState(true);
+
+
+
+  const handleStopMusic = () => {
+    if (volumeA) {
+      setVolumeA(false);
+      audioMp3.volume = 0;
+    } else {
+      setVolumeA(true);
+      audioMp3.volume = 0.5;
+    }
+  };
 
   return (
     <div className="bg-gray-600 w-full h-screen">
       <header className="w-full h-10 bg-gray-700 text-white px-4 flex items-center justify-between">
-        <NavLink to={"/"} className=" font-bold flex items-center gap-1">
+        <a href="/" className=" font-bold flex items-center gap-1">
           MemoryGame
           <RiGameFill className="" />
-        </NavLink>
-
-       
+        </a>
 
         <div className="time">
-          <span className=" font-bold flex items-center gap-1">
-            01:30 <BiTimeFive />
+          <span
+            className=" cursor-pointer"
+            onClick={() => {
+              handleStopMusic();
+            }}
+          >
+            <AiFillSound/>
           </span>
         </div>
       </header>

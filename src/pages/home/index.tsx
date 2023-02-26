@@ -1,8 +1,16 @@
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
+
 import { RiGameFill } from "react-icons/ri";
 import { NavLink } from "react-router-dom";
+import { DadosContext } from "../../context/ContextApp";
 
 export default function Home() {
+  const { audioMp3, setAudioMp3 } = useContext(DadosContext);
+
+  useEffect(() => {
+    audioMp3.play();
+    audioMp3.volume = 0.5;
+  }, []);
   return (
     <div className="w-full h-screen bg-gray-700 flex justify-center items-center">
       <div className="container flex  flex-col items-center gap-3">
