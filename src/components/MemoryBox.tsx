@@ -425,7 +425,7 @@ export default function MemoryBox() {
   };
 
   return (
-    <div className="w-full h-[calc(100vh-40px)] flex flex-col justify-center items-center gap-2">
+    <div className="w-full flex flex-col justify-center items-center gap-2 mt-10">
       <div className="flex max-md:flex-col  gap-4 mb-4">
         <div className="score flex items-center gap-5">
           <span
