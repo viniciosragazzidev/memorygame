@@ -21,7 +21,7 @@ export default function Game() {
   };
 
   return (
-    <div className="bg-gray-600 w-full h-screen">
+    <div className="bg-gray-600 w-full ">
       <header className="w-full h-10 bg-gray-700 text-white px-4 flex items-center justify-between">
         <a href="/" className=" font-bold flex items-center gap-1">
           MemoryGame
